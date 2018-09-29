@@ -19,7 +19,7 @@ tempo, beat_frames = librosa.beat.beat_track(y=y_percussive, sr=sr)
 # numpy.ndarray of size (n_mfcc, T) (T: track duration in frames)
 mfcc = librosa.feature.mfcc(y=y, sr=sr, hop_length=hop_length, n_mfcc=13)
 
-# Calculating trajectoris of MFCC coefficients over time
+# Calculating trajectories of MFCC coefficients over time
 # compute the first-order differences (delta features)
 mfcc_delta = librosa.feature.delta(mfcc)
 
